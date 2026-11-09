@@ -5,7 +5,7 @@ const CONFIG = {
 
 const TOURS = [
   {id:"oldcity", t:"Old City walk", d:"The big sights of Sultanahmet, explained properly.", h:["Hagia Sophia","Blue Mosque","Hippodrome","Basilica Cistern"], time:"3–4 h"},
-  {id:"bazaar", t:"Grand Bazaar & hans", d:"How to shop, haggle and find the old workshops.", h:["Grand Bazaar","Büyük Valide Han rooftop","Mahmutpaşa","Tea break with a local"], time:"2–3 h"},
+  {id:"bazaar", t:"Grand Bazaar & hans", d:"How to shop, haggle and find the old workshops.", h:["Grand Bazaar","Mahmutpaşa","Tea break with a local"], time:"2–3 h"},
   {id:"taksim", t:"Taksim & Beyoğlu", d:"From Taksim Square down to Galata.", h:["İstiklal Avenue","Çiçek Pasajı","Galata Tower","Karaköy"], time:"3 h"}
 ];
 
