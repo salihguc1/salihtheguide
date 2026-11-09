@@ -164,14 +164,13 @@ if($("#q")){
     $("#clear").hidden = !filtered;
     if(!list.length){ $("#results").innerHTML = `<div class="empty">Nothing matches yet. Try another word or <button type="button" class="linkish" data-clear>clear the filters</button>.</div>`; return; }
     const grouped = state.cat==="all" && state.sort==="cat";
-    const narrowed = !!(state.q.trim()||state.area||state.price!==""||state.fav);
     $("#toggle-all").hidden = !grouped;
     if(grouped){
       const shown = CATS.filter(c=>list.some(r=>r.c===c.id));
       $("#results").innerHTML = `<div class="sections">`+shown.map(c=>{
         const g=list.filter(r=>r.c===c.id);
-        const open = narrowed || openCats.has(c.id);
-        const preview = g.slice(0,3).map(r=>esc(r.n)).join(" · ")+(g.length>3?" …":"");
+        const open = openCats.has(c.id);
+        const preview = g.slice(0,3).map(r=>hl(r.n)).join(" · ")+(g.length>3?" …":"");
         return `<details class="cat-section" data-cat="${c.id}"${open?" open":""}><summary><span class="cat-head"><span class="cat-title">${c.label}</span><span class="cat-count">${g.length} ${g.length===1?"place":"places"}</span></span><span class="cat-preview">${preview}</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg></summary><ul class="list">${g.map(r=>row(r,false)).join("")}</ul></details>`;
       }).join("")+`</div>`;
       syncToggleAll();
@@ -186,8 +185,7 @@ if($("#q")){
   }
   $("#results").addEventListener("toggle",e=>{
     const d=e.target; if(!d.classList?.contains("cat-section")) return;
-    const narrowedNow = !!(state.q.trim()||state.area||state.price!==""||state.fav);
-    if(!narrowedNow) d.open ? openCats.add(d.dataset.cat) : openCats.delete(d.dataset.cat);
+    d.open ? openCats.add(d.dataset.cat) : openCats.delete(d.dataset.cat);
     syncToggleAll();
   },true);
   function render(){ renderChips(); renderResults(); }
