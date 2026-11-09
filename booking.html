@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Booking | Salih Güç · Istanbul Tour Guide</title>
+<meta name="description" content="Request an Istanbul tour with Salih on WhatsApp.">
+<link rel="canonical" href="https://salihtheguide.com/booking.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://salihtheguide.com/booking.html">
+<meta property="og:title" content="Booking | Salih Güç · Istanbul Tour Guide">
+<meta property="og:description" content="Request an Istanbul tour with Salih on WhatsApp.">
+<meta property="og:image" content="https://salihtheguide.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Salih Güç, tour guide in Istanbul">
+<meta property="og:site_name" content="Salih Güç · Istanbul Tour Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://salihtheguide.com/og-image.png">
+<meta name="theme-color" content="#0D6E68" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1615" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D6E68'/%3E%3Cpath d='M14 50V38a18 18 0 0 1 36 0v12z' fill='%23fff'/%3E%3Crect x='30' y='12' width='4' height='10' rx='2' fill='%23F6ECD8'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dusk"||t==="dark")document.documentElement.dataset.theme=t;}catch(e){}</script>
+
+<link rel="preload" href="fonts/figtree.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/bricolage-grotesque.woff" as="font" type="font/woff" crossorigin>
+
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">Salih <span>Güç</span></a>
+    <nav class="links" id="site-nav" aria-label="Sections">
+      <a href="tours.html">Tours</a>
+      <a href="istanbul-guide.html">What to Do in İstanbul</a>
+      <a href="blog/">Blog</a>
+      <a href="about.html">About me</a>
+      <a href="booking.html" aria-current="page">Booking</a>
+    </nav>
+    <div class="themes" role="group" aria-label="Colour theme">
+      <button type="button" data-set="light" aria-label="Light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></svg></button>
+      <button type="button" data-set="dusk" aria-label="Dusk" title="Dusk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"/><path d="M3 21h18"/><path d="M12 9v-6l3 3m-6 0l3 -3"/></svg></button>
+      <button type="button" data-set="dark" aria-label="Dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg></button>
+    </div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="m-open" d="M4 7h16M4 12h16M4 17h16"/><path class="m-close" d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <section id="book" class="guide">
+    <div class="wrap book-grid">
+      <div>
+        <div class="eyebrow">Book a tour</div>
+        <h1 class="section-title" style="margin-top:10px">Send me your plans</h1>
+        <p style="color:var(--muted);margin-top:14px;max-width:30em">Fill in the form and it opens WhatsApp with your request written out. No WhatsApp? Email me instead. I usually reply within a few hours.</p>
+        <div class="contact-list">
+          <div><div class="k">WhatsApp</div><div class="v"><span id="phone">+90 551 025 16 87</span><button type="button" class="copy" id="copy-phone">Copy</button></div></div>
+          <div><div class="k">Email</div><div class="v"><a class="mail" href="mailto:muhammedsalihguc@gmail.com">muhammedsalihguc@gmail.com</a></div></div>
+        </div>
+      </div>
+      <form id="book-form" novalidate>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" autocomplete="name" placeholder="Anna Rossi"><span class="err" id="e-name"></span></div>
+        <div class="field"><label for="f-date">Preferred date</label><input id="f-date" type="date"><span class="err" id="e-date"></span></div>
+        <div class="field"><label for="f-tour">Tour</label><select id="f-tour"></select></div>
+        <div class="field"><label for="f-size">Group size</label><input id="f-size" type="number" min="1" max="30" value="2" aria-describedby="e-size"><span class="err" id="e-size" aria-live="polite"></span></div>
+        <div class="field full"><label for="f-note">Anything I should know?</label><textarea id="f-note" placeholder="We love food and old streets. One of us walks slowly."></textarea></div>
+        <button class="btn btn-sea" type="submit">Send request on WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq">
+      <div class="sec-head"><div class="eyebrow">FAQ</div><h2>Good to know</h2></div>
+      <div id="faq-list"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Muhammed Salih Güç · Tour guide in Istanbul</span>
+    <span class="foot-contact"><a href="https://wa.me/905510251687" target="_blank" rel="noopener">WhatsApp +90 551 025 16 87</a><a href="mailto:muhammedsalihguc@gmail.com">muhammedsalihguc@gmail.com</a></span>
+  </div>
+</footer>
+</body>
+</html>
