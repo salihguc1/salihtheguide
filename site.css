@@ -201,3 +201,22 @@ footer{border-top:1px solid var(--line);padding-block:32px;font-size:14px;color:
 /* 404 */
 .notfound{padding-block:clamp(72px,14vw,160px)}
 .notfound p{color:var(--muted);max-width:34em;margin-top:16px;font-size:18px}
+
+/* guide: collapsible category sections */
+.bar-actions{display:flex;gap:18px}
+.sections{display:flex;flex-direction:column;gap:12px}
+.cat-section{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:0}
+.cat-section summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;align-items:center;padding:18px 20px;font-weight:400}
+.cat-section summary::-webkit-details-marker{display:none}
+.cat-section summary:hover .cat-title{color:var(--sea)}
+.cat-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;min-width:0}
+.cat-title{font-family:var(--display);font-size:21px;font-weight:600;color:var(--ink)}
+.cat-count{font-size:13px;font-weight:600;color:var(--gold-ink);background:var(--gold-soft);border-radius:999px;padding:2px 10px;white-space:nowrap}
+.cat-preview{grid-column:1;font-size:14.5px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.chev{grid-column:2;grid-row:1/span 2;width:22px;height:22px;color:var(--muted);transition:transform .2s}
+.cat-section[open] .chev{transform:rotate(180deg)}
+.cat-section[open] .cat-preview{display:none}
+.cat-section[open] summary{border-bottom:1px solid var(--line)}
+.cat-section .list{border-top:0;padding:0 20px}
+.cat-section .list li:last-child{border-bottom:0}
+@media (max-width:480px){.cat-section summary{padding:16px}.cat-section .list{padding:0 16px}.cat-preview{white-space:normal}}

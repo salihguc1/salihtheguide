@@ -163,12 +163,33 @@ if($("#q")){
     $("#count").textContent = `${list.length} ${list.length===1?"place":"places"}`+(state.cat!=="all"?` in ${catLabel[state.cat]}`:"");
     $("#clear").hidden = !filtered;
     if(!list.length){ $("#results").innerHTML = `<div class="empty">Nothing matches yet. Try another word or <button type="button" class="linkish" data-clear>clear the filters</button>.</div>`; return; }
-    if(state.cat==="all" && state.sort==="cat"){
-      $("#results").innerHTML = CATS.map(c=>{ const g=list.filter(r=>r.c===c.id); return g.length?`<h3 class="group-title">${c.label}<span>${g.length}</span></h3><ul class="list">${g.map(r=>row(r,false)).join("")}</ul>`:""; }).join("");
+    const grouped = state.cat==="all" && state.sort==="cat";
+    const narrowed = !!(state.q.trim()||state.area||state.price!==""||state.fav);
+    $("#toggle-all").hidden = !grouped;
+    if(grouped){
+      const shown = CATS.filter(c=>list.some(r=>r.c===c.id));
+      $("#results").innerHTML = `<div class="sections">`+shown.map(c=>{
+        const g=list.filter(r=>r.c===c.id);
+        const open = narrowed || openCats.has(c.id);
+        const preview = g.slice(0,3).map(r=>esc(r.n)).join(" · ")+(g.length>3?" …":"");
+        return `<details class="cat-section" data-cat="${c.id}"${open?" open":""}><summary><span class="cat-head"><span class="cat-title">${c.label}</span><span class="cat-count">${g.length} ${g.length===1?"place":"places"}</span></span><span class="cat-preview">${preview}</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6l6 -6"/></svg></summary><ul class="list">${g.map(r=>row(r,false)).join("")}</ul></details>`;
+      }).join("")+`</div>`;
+      syncToggleAll();
     } else {
       $("#results").innerHTML = `<ul class="list">${list.map(r=>row(r,state.cat==="all")).join("")}</ul>`;
     }
   }
+  const openCats = new Set();
+  function syncToggleAll(){
+    const all=[...document.querySelectorAll(".cat-section")];
+    $("#toggle-all").textContent = all.length && all.every(d=>d.open) ? "Close all" : "Open all";
+  }
+  $("#results").addEventListener("toggle",e=>{
+    const d=e.target; if(!d.classList?.contains("cat-section")) return;
+    const narrowedNow = !!(state.q.trim()||state.area||state.price!==""||state.fav);
+    if(!narrowedNow) d.open ? openCats.add(d.dataset.cat) : openCats.delete(d.dataset.cat);
+    syncToggleAll();
+  },true);
   function render(){ renderChips(); renderResults(); }
   function clearAll(){ Object.assign(state,{q:"",cat:"all",area:"",price:"",sort:"cat",fav:false}); $("#q").value=""; $("#f-area").value=""; $("#f-price").value=""; $("#f-sort").value="cat"; $("#f-fav").checked=false; render(); }
 
@@ -179,6 +200,12 @@ if($("#q")){
   $("#f-sort").addEventListener("change",e=>{state.sort=e.target.value; render();});
   $("#f-fav").addEventListener("change",e=>{state.fav=e.target.checked; render();});
   $("#clear").addEventListener("click",clearAll);
+  $("#toggle-all").addEventListener("click",()=>{
+    const all=[...document.querySelectorAll(".cat-section")];
+    const openThem = !all.every(d=>d.open);
+    all.forEach(d=>{ d.open=openThem; openThem?openCats.add(d.dataset.cat):openCats.delete(d.dataset.cat); });
+    syncToggleAll();
+  });
   $("#results").addEventListener("click",e=>{ if(e.target.closest("[data-clear]")) clearAll(); });
   render();
 }
