@@ -1,0 +1,18 @@
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/index.html">Salih <span>Güç</span></a>
+    <nav class="links" id="site-nav" aria-label="Sections">
+      <a href="/tours.html">Tours</a>
+      <a href="/istanbul-guide.html">What to Do in İstanbul</a>
+      <a href="/blog/"{% if page.nav == "blog" %} aria-current="page"{% endif %}>Blog</a>
+      <a href="/about.html">About me</a>
+      <a href="/booking.html">Booking</a>
+    </nav>
+    <div class="themes" role="group" aria-label="Colour theme">
+      <button type="button" data-set="light" aria-label="Light" title="Light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"/></svg></button>
+      <button type="button" data-set="dusk" aria-label="Dusk" title="Dusk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"/><path d="M3 21h18"/><path d="M12 9v-6l3 3m-6 0l3 -3"/></svg></button>
+      <button type="button" data-set="dark" aria-label="Dark" title="Dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"/></svg></button>
+    </div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="m-open" d="M4 7h16M4 12h16M4 17h16"/><path class="m-close" d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+</header>

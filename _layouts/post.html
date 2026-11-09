@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }} | Salih Güç · Istanbul Tour Guide</title>
+<meta name="description" content="{{ page.description | default: 'Stories and practical tips about Istanbul from local guide Salih Güç.' | strip_html | escape }}">
+<link rel="canonical" href="https://salihtheguide.com{{ page.url }}">
+<meta property="og:url" content="https://salihtheguide.com{{ page.url }}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: 'Stories and practical tips about Istanbul from local guide Salih Güç.' | strip_html | escape }}">
+<meta property="og:image" content="https://salihtheguide.com{{ page.image | default: '/og-image.png' }}">
+<meta property="og:site_name" content="Salih Güç · Istanbul Tour Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://salihtheguide.com{{ page.image | default: '/og-image.png' }}">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+{% include head-common.html %}
+</head>
+<body>
+{% include header.html %}
+
+<main id="top">
+  <article class="post">
+    <div class="wrap post-wrap">
+      <a class="back" href="/blog/">← All posts</a>
+      <div class="post-head">
+        <div class="eyebrow">{{ page.category | default: "Istanbul" }}</div>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}<p class="post-lead">{{ page.description }}</p>{% endif %}
+        {% assign words = content | number_of_words %}{% assign minutes = words | divided_by: 200 | plus: 1 %}
+        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time> · {{ minutes }} min read · By Salih Güç</p>
+      </div>
+      {% if page.image %}<img class="post-cover" src="{{ page.image }}" alt="{{ page.image_alt | default: page.title | escape }}">{% endif %}
+      <div class="prose">
+{{ content }}
+      </div>
+      <div class="private post-cta">
+        <div>
+          <h3>See it with a local</h3>
+          <p>I lead small walking tours and private tours through the Old City, the Grand Bazaar and Taksim.</p>
+        </div>
+        <a class="btn" href="/booking.html">Book a tour</a>
+      </div>
+      {% if page.previous or page.next %}<nav class="post-nav" aria-label="More posts">
+        {% if page.previous %}<a href="{{ page.previous.url }}"><span>Older</span>{{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
+        {% if page.next %}<a class="next" href="{{ page.next.url }}"><span>Newer</span>{{ page.next.title }}</a>{% endif %}
+      </nav>{% endif %}
+    </div>
+  </article>
+</main>
+
+{% include footer.html %}
+</body>
+</html>

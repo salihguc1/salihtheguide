@@ -1,0 +1,65 @@
+---
+layout: null
+title: Blog
+description: Stories and practical tips about Istanbul from local guide Salih Güç.
+nav: blog
+permalink: /blog/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ page.title }} | Salih Güç · Istanbul Tour Guide</title>
+<meta name="description" content="{{ page.description | default: 'Stories and practical tips about Istanbul from local guide Salih Güç.' | strip_html | escape }}">
+<link rel="canonical" href="https://salihtheguide.com{{ page.url }}">
+<meta property="og:url" content="https://salihtheguide.com{{ page.url }}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | default: 'Stories and practical tips about Istanbul from local guide Salih Güç.' | strip_html | escape }}">
+<meta property="og:image" content="https://salihtheguide.com{{ page.image | default: '/og-image.png' }}">
+<meta property="og:site_name" content="Salih Güç · Istanbul Tour Guide">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://salihtheguide.com{{ page.image | default: '/og-image.png' }}">
+<meta property="og:type" content="website">
+{% include head-common.html %}
+</head>
+<body>
+{% include header.html %}
+
+<main id="top">
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Blog</div>
+        <h1 class="section-title">Stories and tips from Istanbul</h1>
+        <p>What I've learned walking this city every day: history, food, practical advice and the places most visitors miss.</p>
+      </div>
+      {% if site.posts.size > 0 %}
+      <div class="post-list">
+        {% for post in site.posts %}
+        {% assign words = post.content | number_of_words %}{% assign minutes = words | divided_by: 200 | plus: 1 %}
+        <a class="post-card" href="{{ post.url }}">
+          {% if post.image %}<img src="{{ post.image }}" alt="" loading="lazy">{% endif %}
+          <div class="post-card-body">
+            <span class="eyebrow">{{ post.category | default: "Istanbul" }}</span>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 32 }}</p>
+            <span class="post-meta">{{ post.date | date: "%-d %B %Y" }} · {{ minutes }} min read</span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="blog-empty">
+        <h2>First stories coming soon</h2>
+        <p>I'm writing about the Istanbul I know: where to eat, how to get around, and the history behind the places on my tours. Check back soon, or explore my guide in the meantime.</p>
+        <div class="cta"><a class="btn btn-sea" href="/istanbul-guide.html">Open my Istanbul guide</a><a class="btn btn-line" href="/tours.html">See the tours</a></div>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</main>
+
+{% include footer.html %}
+</body>
+</html>

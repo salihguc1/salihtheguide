@@ -1,8 +1,13 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://salihtheguide.com/</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://salihtheguide.com/tours.html</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://salihtheguide.com/istanbul-guide.html</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://salihtheguide.com/about.html</loc><lastmod>2026-11-10</lastmod></url>
-  <url><loc>https://salihtheguide.com/booking.html</loc><lastmod>2026-11-10</lastmod></url>
-</urlset>
+  <url><loc>https://salihtheguide.com/</loc></url>
+  <url><loc>https://salihtheguide.com/tours.html</loc></url>
+  <url><loc>https://salihtheguide.com/istanbul-guide.html</loc></url>
+  <url><loc>https://salihtheguide.com/blog/</loc></url>
+  <url><loc>https://salihtheguide.com/about.html</loc></url>
+  <url><loc>https://salihtheguide.com/booking.html</loc></url>
+{% for post in site.posts %}  <url><loc>https://salihtheguide.com{{ post.url }}</loc><lastmod>{{ post.date | date_to_xmlschema }}</lastmod></url>
+{% endfor %}</urlset>

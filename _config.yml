@@ -1,0 +1,19 @@
+# Settings for GitHub Pages (Jekyll). Blog posts go in the _posts folder.
+title: "Salih Güç · Istanbul Tour Guide"
+url: "https://salihtheguide.com"
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+permalink: /blog/:title/
+timezone: Europe/Istanbul
+exclude:
+  - README.md
+  - HOW-TO-WRITE-A-POST.md
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      nav: blog
