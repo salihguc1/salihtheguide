@@ -1,6 +1,6 @@
 ---
 title: "10 Istanbul street foods to try on your first trip"
-description: "From simit and fish sandwiches to stuffed mussels and stretchy ice cream: what to order, how to eat it, and where to look for it in Istanbul."
+description: "Try Istanbul street food on your first trip. Find out what to order and where to look for simit, fish sandwiches, börek and more."
 category: "Food"
 ---
 
@@ -67,6 +67,8 @@ Corn carts sell *közde mısır*, grilled corn, and *haşlanmış mısır*, boil
 *Dondurma* simply means ice cream. For the famously dense, stretchy kind, ask for *Maraş dondurması*, named after the city of Kahramanmaraş. Start with *sade*, the plain milk flavour, to really taste the texture. Order *bir top* for one scoop or *iki top* for two.
 
 You'll find ice cream shops along İstiklal and in Moda. Some vendors do tricks with the cone before letting you have it. It's part of the show, so play along. If you'd rather skip the performance, ask for a cup.
+
+To build a day around market snacks and a proper lunch, follow my [Kadıköy and Moda route](/blog/kadikoy-and-moda-in-one-day/).
 
 ## My tip
 

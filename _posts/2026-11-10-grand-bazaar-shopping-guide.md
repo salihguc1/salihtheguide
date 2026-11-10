@@ -1,6 +1,6 @@
 ---
 title: "The Grand Bazaar: how to shop and bargain without stress"
-description: "When to go, how bargaining works, how to judge a fair price, what's worth buying, and how not to get lost in Istanbul's Grand Bazaar."
+description: "Plan a visit to Istanbul’s Grand Bazaar with tips on opening days, bargaining, finding the surrounding hans and choosing what to buy."
 category: "Shopping"
 ---
 
@@ -59,4 +59,4 @@ From Mahmutpaşa, the shopping streets slope downhill all the way to Eminönü, 
 
 ## My tip
 
-Compare prices before you bargain, and give yourself permission to leave without buying anything. If the courtyards and workshops interest you more than the shopping, my [Grand Bazaar & hans walk](/tours.html) takes you through the covered market and the trading streets around it.
+Compare prices before you bargain, and give yourself permission to leave without buying anything. If the courtyards and workshops interest you more than the shopping, my [Grand Bazaar walking tour](/tours.html) takes you through the covered market and the trading streets around it.

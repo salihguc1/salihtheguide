@@ -7,7 +7,9 @@ kramdown:
   auto_ids: true
 permalink: /blog/:title/
 timezone: Europe/Istanbul
+blog_click_counter: ""
 exclude:
+  - blog-counter
   - README.md
   - HOW-TO-WRITE-A-POST.md
 defaults:

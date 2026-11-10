@@ -1,6 +1,6 @@
 ---
 title: "Visiting mosques in Istanbul: what to wear and how to behave"
-description: "What to wear, when to go around prayer times, and how visiting works at the Blue Mosque and Hagia Sophia on your first trip to Istanbul."
+description: "A guide to Istanbul mosque etiquette, including what to wear, how to plan around prayer times and where to enter at the Blue Mosque and Hagia Sophia."
 category: "Culture"
 ---
 
@@ -15,7 +15,7 @@ Mosques are places of worship first. At the five daily prayers, sightseeing visi
 For an easier visit, aim for mid-morning on a day other than Friday. Fridays are different because of the midday congregational prayer, called *cuma namazı*:
 
 - **The Blue Mosque** is closed to sightseeing visitors during Friday midday prayer and reopens in the early afternoon.
-- **Hagia Sophia** closes its visitor route for a period before and after the Friday midday prayer.
+- **Hagia Sophia** has a separate ticketed visitor route. Check the current Friday arrangements before setting off.
 
 If Friday is your only day in Sultanahmet, start with the Hippodrome or the Basilica Cistern and visit the mosques once they've reopened.
 
@@ -62,6 +62,8 @@ My [Old City walk](/tours.html) covers Hagia Sophia and the Blue Mosque together
 Istanbul has thousands of mosques, and many smaller ones are just as beautiful. You may find fewer signs and no visitor queue. If you can't tell whether visitors are welcome at that moment, ask *Ziyaret edebilir miyim?* ("May I visit?"). A gesture towards the shoe rack is often all the answer you need.
 
 The same habits apply everywhere: wear suitable clothing, take your shoes off at the door, and give people who have come to pray plenty of room. If you're asked to come back later, it's usually because prayer is about to start. Take a tea break nearby and try again when it's quieter.
+
+For the ticketed gallery and how to find it, see my [Hagia Sophia visitor guide](/blog/visiting-hagia-sophia/).
 
 ## My tip
 

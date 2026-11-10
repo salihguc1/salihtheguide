@@ -1,6 +1,6 @@
 ---
 title: "What to do in Istanbul on a rainy day"
-description: "Rain in Istanbul? Spend the day in underground cisterns, museums, covered bazaars and a Turkish hamam, and take a ferry if the weather allows."
+description: "Find indoor things to do in Istanbul on a rainy day, from the Basilica Cistern and covered bazaars to museums and a Turkish hamam."
 category: "Itineraries"
 ---
 
@@ -58,7 +58,9 @@ Strong wind and fog can delay or cancel sailings, so check Şehir Hatları's ser
 
 **Plan 1: Sultanahmet.** Basilica Cistern in the morning, lunch at a lokanta, the Archaeological Museums in the afternoon. Add the Grand Bazaar if you still have energy (but not on a Sunday).
 
-**Plan 2: Karaköy and Tophane.** Istanbul Modern in the morning, börek and tea or a long lunch in Karaköy, then a booked session at Kılıç Ali Paşa Hamamı in the afternoon. Don't try this one on a Monday, when the museum is closed.
+**Plan 2: Karaköy and Tophane.** Istanbul Modern in the morning, börek and tea or a long lunch in Karaköy, then a booked session at Kılıç Ali Paşa Hamamı at the right time for your party. Check the museum’s opening days and the hamam’s separate session times before going.
+
+For more places to stop in the same neighbourhood, see my [Taksim to Karaköy walking route](/blog/taksim-to-karakoy-walking-route/).
 
 ## My tip
 

@@ -1,6 +1,6 @@
 ---
 title: "6 common tourist scams in Istanbul and how to avoid them"
-description: "From the dropped shoe brush to taxi meters and surprise bar bills: what to watch for on your first trip to Istanbul, and what to say."
+description: "Learn how to avoid common Istanbul tourist scams, from taxi meter tricks and surprise bar bills to confusing currency charges."
 category: "Tips"
 ---
 
@@ -55,6 +55,8 @@ When you pay by card, the machine may offer to charge you in your home currency 
 At an ATM, the same offer may appear. Declining the conversion is usually the better deal, but it doesn't remove any fee the ATM itself charges, so read the screen carefully. At an exchange office, ask how many lira you'll receive after commission, then count the cash before you leave and keep the receipt.
 
 When paying in cash in a busy shop, say the value of the note out loud as you hand it over, for example "two hundred", and count your change at the counter. It's much easier to sort out a mistake while you and the cashier are still looking at the same money.
+
+For your first ride into town, compare the metro, shuttle and official taxi options in my [Istanbul airport transfer guide](/blog/istanbul-airport-to-city-centre/).
 
 ## My tip
 
