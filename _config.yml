@@ -7,7 +7,7 @@ kramdown:
   auto_ids: true
 permalink: /blog/:title/
 timezone: Europe/Istanbul
-blog_click_counter: ""
+blog_click_counter: "https://salihtheguide-blog-clicks.muhammedsalihguc.workers.dev"
 exclude:
   - blog-counter
   - README.md
