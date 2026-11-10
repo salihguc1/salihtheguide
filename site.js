@@ -129,6 +129,10 @@ if($("#home-picks")){
 /* ---- guide ---- */
 if($("#q")){
   const state = {q:"", cat:"all", area:"", price:"", sort:"cat", fav:false};
+  const filterToggle = $("#filter-toggle");
+  filterToggle?.addEventListener("click",()=>{
+    filterToggle.setAttribute("aria-expanded",filterToggle.getAttribute("aria-expanded")!=="true");
+  });
   const places = [...new Set(RECS.filter(r=>r.c!=="books").map(r=>r.a))].sort((a,b)=>a.localeCompare(b,"tr"));
   $("#f-area").innerHTML = `<option value="">All areas</option>` + places.map(a=>`<option>${esc(a)}</option>`).join("");
 
