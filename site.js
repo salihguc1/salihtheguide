@@ -18,37 +18,38 @@ const CATS = [
   {id:"books", label:"Books to read"}
 ];
 
-/* c = category · n = name · a = neighbourhood (author for books) · p = price 0–3 (0 = free, null = n/a) · fav = your personal favourite */
+/* c = category · n = name · a = neighbourhood (author for books) · p = price 0–3 (0 = free, null = n/a) · fav = your personal favourite
+   Use maps for a specific search or for an entry that covers several destinations. */
 const RECS = [
-  {c:"cheap", n:"Balık ekmek boats", a:"Eminönü", p:1, fav:true, t:"Grilled fish sandwich straight off the boats by the Galata Bridge. Add pickle juice from the stall next door."},
+  {c:"cheap", n:"Balık ekmek boats", a:"Eminönü", p:1, fav:true, maps:[{label:"Fish boats map", query:"Eminönü Balık Ekmek Tekneleri"}], t:"Grilled fish sandwich straight off the boats by the Galata Bridge. Add pickle juice from the stall next door."},
   {c:"cheap", n:"Dürümzade", a:"Beyoğlu", p:1, t:"Small, famous dürüm place off İstiklal. Order the Adana or the chicken wrap and eat standing up."},
   {c:"cheap", n:"Karaköy Güllüoğlu", a:"Karaköy", p:1, fav:true, t:"The baklava benchmark. Try the pistachio şöbiyet with a glass of tea."},
   {c:"cheap", n:"Vefa Bozacısı", a:"Fatih", p:1, t:"A tiny 1876 shop serving boza, a thick fermented winter drink. Go after Süleymaniye."},
   {c:"cheap", n:"Halil Lahmacun", a:"Kadıköy", p:1, t:"Thin, crisp lahmacun since 1963. Worth the ferry ride to the Asian side."},
-  {c:"cheap", n:"Simit from a street cart", a:"Everywhere", p:1, t:"Istanbul's sesame bread ring. Best in the morning, with a triangle of cheese."},
+  {c:"cheap", n:"Simit from a street cart", a:"Everywhere", p:1, maps:[{label:"Find simit near Sultanahmet", query:"simit near Sultanahmet tram stop"}], t:"Istanbul's sesame bread ring. Best in the morning, with a triangle of cheese."},
   {c:"nice", n:"Çiya Sofrası", a:"Kadıköy", p:2, fav:true, t:"Regional Anatolian dishes you won't find elsewhere. Point at what looks good at the counter."},
-  {c:"nice", n:"Hamdi", a:"Eminönü", p:2, t:"Kebabs with a view over the Golden Horn. Ask for a window table upstairs."},
+  {c:"nice", n:"Hamdi", a:"Eminönü", p:2, maps:[{label:"Hamdi Restaurant map", query:"Hamdi Restaurant, Eminönü"}], t:"Kebabs with a view over the Golden Horn. Ask for a window table upstairs."},
   {c:"nice", n:"Pandeli", a:"Eminönü", p:2, t:"Historic restaurant above the Spice Bazaar entrance, covered in blue tiles. Great for lunch."},
   {c:"nice", n:"Deraliye", a:"Sultanahmet", p:3, t:"Recipes from the Ottoman palace kitchens, a short walk from Hagia Sophia."},
   {c:"nice", n:"Mikla", a:"Beyoğlu", p:3, t:"Modern Turkish tasting menu on a rooftop with a full city view. Book well ahead."},
-  {c:"do", n:"Bosphorus by public ferry", a:"Eminönü", p:1, fav:true, t:"From Eminönü, adult İstanbulkart fares are about ₺59 to Üsküdar and ₺65 to Kadıköy (10 November 2026). Both crossings offer skyline views. The Long Bosphorus Tour goes farther north to Anadolu Kavağı."},
-  {c:"do", n:"Hagia Sophia & Blue Mosque", a:"Sultanahmet", p:2, t:"Go early in the morning and avoid prayer times. Dress modestly; scarves are provided."},
+  {c:"do", n:"Bosphorus by public ferry", a:"Eminönü", p:1, fav:true, maps:[{label:"Eminönü ferry piers map", query:"Şehir Hatları Eminönü İskeleleri"}], t:"From Eminönü, adult İstanbulkart fares are about ₺59 to Üsküdar and ₺65 to Kadıköy (10 November 2026). Both crossings offer skyline views. The Long Bosphorus Tour goes farther north to Anadolu Kavağı."},
+  {c:"do", n:"Hagia Sophia & Blue Mosque", a:"Sultanahmet", p:2, maps:[{label:"Hagia Sophia map", query:"Ayasofya-i Kebir Cami-i Şerifi, Sultanahmet"}, {label:"Blue Mosque map", query:"Sultanahmet Camii, Sultanahmet"}], t:"Go early in the morning and avoid prayer times. Dress modestly; scarves are provided."},
   {c:"do", n:"Basilica Cistern", a:"Sultanahmet", p:2, t:"The 6th-century underground water palace. Look for the two Medusa heads at the back."},
   {c:"do", n:"Topkapı Palace", a:"Sultanahmet", p:2, t:"Allow at least three hours. The standard combined ticket includes the palace, the Harem and Hagia Irene."},
   {c:"do", n:"Kılıç Ali Paşa Hamamı", a:"Karaköy", p:3, t:"Historic hamam in Tophane, Karaköy. Book ahead for a scrub and foam wash."},
   {c:"do", n:"Çemberlitaş Hamamı", a:"Old City", p:3, t:"A historic Old City bath. Ask about the scrub and foam wash."},
-  {c:"do", n:"Kadıköy market streets", a:"Kadıköy", p:0, t:"Fish stalls, pickle shops and cafés. The Asian side's most fun afternoon."},
-  {c:"do", n:"Princes' Islands", a:"Islands", p:1, t:"A car-free island day trip by ferry. Rent a bike and loop the island."},
+  {c:"do", n:"Kadıköy market streets", a:"Kadıköy", p:0, maps:[{label:"Kadıköy market map", query:"Kadıköy Çarşısı, Kadıköy"}], t:"Fish stalls, pickle shops and cafés. The Asian side's most fun afternoon."},
+  {c:"do", n:"Princes' Islands", a:"Islands", p:1, maps:[{label:"Princes’ Islands map", query:"Adalar"}], t:"A car-free island day trip by ferry. Rent a bike and loop the island."},
   {c:"night", n:"Nardis Jazz Club", a:"Galata", p:2, t:"Small, serious jazz club by Galata Tower with live music most nights."},
-  {c:"night", n:"Kadife Sokak (Bar Street)", a:"Kadıköy", p:1, t:"A whole street of relaxed bars where Istanbul's students and locals go out."},
-  {c:"night", n:"Nevizade & Asmalımescit", a:"Beyoğlu", p:2, fav:true, t:"Meyhane alleys for rakı, meze and long tables that get louder as the night goes on."},
-  {c:"night", n:"Karaköy waterfront", a:"Karaköy", p:2, t:"Cocktail bars and cafés by the water, busy on summer nights."},
-  {c:"night", n:"Night walk on Galata Bridge", a:"Eminönü", p:0, t:"Free and lovely: fishermen above, lit-up mosques across the water."},
-  {c:"photo", n:"Balat's colourful houses", a:"Balat", p:0, fav:true, t:"Painted wooden houses on steep streets. Kiremit Caddesi is the classic shot."},
-  {c:"photo", n:"Süleymaniye terrace", a:"Fatih", p:0, t:"The garden behind the mosque looks over the Golden Horn. Best at sunset."},
-  {c:"photo", n:"Ortaköy Mosque & bridge", a:"Ortaköy", p:0, t:"The mosque with the Bosphorus Bridge behind it. Come at blue hour."},
-  {c:"photo", n:"Rüstem Paşa Mosque tiles", a:"Eminönü", p:0, t:"Some of the finest İznik tiles in the city, hidden above the market stalls."},
-  {c:"photo", n:"Pierre Loti Hill", a:"Eyüp", p:1, t:"Take the cable car up for a wide view of the Golden Horn with your tea."},
+  {c:"night", n:"Kadife Sokak (Bar Street)", a:"Kadıköy", p:1, maps:[{label:"Kadife Sokak map", query:"Kadife Sokak, Kadıköy"}], t:"A whole street of relaxed bars where Istanbul's students and locals go out."},
+  {c:"night", n:"Nevizade & Asmalımescit", a:"Beyoğlu", p:2, fav:true, maps:[{label:"Nevizade map", query:"Nevizade Sokak, Beyoğlu"}, {label:"Asmalımescit map", query:"Asmalımescit, Beyoğlu"}], t:"Meyhane alleys for rakı, meze and long tables that get louder as the night goes on."},
+  {c:"night", n:"Karaköy waterfront", a:"Karaköy", p:2, maps:[{label:"Karaköy waterfront map", query:"Karaköy İskelesi, Karaköy"}], t:"Cocktail bars and cafés by the water, busy on summer nights."},
+  {c:"night", n:"Night walk on Galata Bridge", a:"Eminönü", p:0, maps:[{label:"Galata Bridge map", query:"Galata Köprüsü"}], t:"Free and lovely: fishermen above, lit-up mosques across the water."},
+  {c:"photo", n:"Balat's colourful houses", a:"Balat", p:0, fav:true, maps:[{label:"Kiremit Caddesi map", query:"Kiremit Caddesi, Balat"}], t:"Painted wooden houses on steep streets. Kiremit Caddesi is the classic shot."},
+  {c:"photo", n:"Süleymaniye terrace", a:"Fatih", p:0, maps:[{label:"Süleymaniye Mosque map", query:"Süleymaniye Camii, Fatih"}], t:"The garden behind the mosque looks over the Golden Horn. Best at sunset."},
+  {c:"photo", n:"Ortaköy Mosque & bridge", a:"Ortaköy", p:0, maps:[{label:"Ortaköy Mosque map", query:"Büyük Mecidiye Camii, Ortaköy"}], t:"The mosque with the Bosphorus Bridge behind it. Come at blue hour."},
+  {c:"photo", n:"Rüstem Paşa Mosque tiles", a:"Eminönü", p:0, maps:[{label:"Rüstem Paşa Mosque map", query:"Rüstem Paşa Camii, Eminönü"}], t:"Some of the finest İznik tiles in the city, hidden above the market stalls."},
+  {c:"photo", n:"Pierre Loti Hill", a:"Eyüp", p:1, maps:[{label:"Pierre Loti Hill map", query:"Piyer Loti Tepesi, Eyüpsultan"}], t:"Take the cable car up for a wide view of the Golden Horn with your tea."},
   {c:"photo", n:"Kuzguncuk", a:"Üsküdar", p:0, t:"A quiet village feel on the Asian shore, with old wooden houses and plane trees."},
   {c:"books", n:"Istanbul: Memories and the City", a:"Orhan Pamuk", p:null, fav:true, t:"Pamuk's memoir of growing up in the city. The best book to read before you come."},
   {c:"books", n:"The Museum of Innocence", a:"Orhan Pamuk", p:null, t:"A love story set in 1970s Istanbul. You can visit the real museum in Çukurcuma."},
@@ -78,7 +79,8 @@ const THEMES = ["light","dusk","dark"];
 function currentTheme(){ const t=root.dataset.theme; return THEMES.includes(t) ? t : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); }
 function syncThemeBtn(){ const t=currentTheme(); document.querySelectorAll(".themes button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.set===t)); }
 try{ const s=localStorage.getItem("theme"); if(THEMES.includes(s)) root.dataset.theme=s; }catch(e){}
-document.querySelector(".themes").addEventListener("click",e=>{ const b=e.target.closest("[data-set]"); if(!b) return; root.dataset.theme=b.dataset.set; try{localStorage.setItem("theme",b.dataset.set)}catch(e){} syncThemeBtn(); });
+const themes = $(".themes");
+themes.addEventListener("click",e=>{ const b=e.target.closest("[data-set]"); if(!b) return; root.dataset.theme=b.dataset.set; try{localStorage.setItem("theme",b.dataset.set)}catch(e){} syncThemeBtn(); });
 matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change",syncThemeBtn);
 new MutationObserver(syncThemeBtn).observe(root,{attributes:true,attributeFilter:["data-theme"]});
 syncThemeBtn();
@@ -86,12 +88,31 @@ syncThemeBtn();
 /* ---- phone menu ---- */
 const menuBtn = $("#menu-btn"), header = document.querySelector("header");
 if(menuBtn){
+  const nav = $("#site-nav");
   const setMenu = (open)=>{ header.classList.toggle("open",open); menuBtn.setAttribute("aria-expanded",open); menuBtn.setAttribute("aria-label",open?"Close menu":"Open menu"); };
+  const phoneMenu = matchMedia("(max-width:820px)");
+  const arrangeMenu = ()=>{
+    if(phoneMenu.matches){
+      // The open links follow the disclosure button in the keyboard order.
+      menuBtn.after(nav);
+    } else if(menuBtn.nextElementSibling===nav){
+      themes.before(nav);
+      setMenu(false);
+    }
+  };
+  arrangeMenu();
+  phoneMenu.addEventListener?.("change",arrangeMenu);
   menuBtn.addEventListener("click",()=>setMenu(!header.classList.contains("open")));
-  document.addEventListener("click",e=>{ if(!header.contains(e.target)) setMenu(false); });
-  document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ setMenu(false); } });
-  $("#site-nav").addEventListener("click",e=>{ if(e.target.closest("a")) setMenu(false); });
-  matchMedia("(min-width:821px)").addEventListener?.("change",e=>{ if(e.matches) setMenu(false); });
+  const closeOutside = e=>{ if(header.classList.contains("open") && !header.contains(e.target)) setMenu(false); };
+  document.addEventListener("click",closeOutside);
+  document.addEventListener("focusin",closeOutside);
+  document.addEventListener("keydown",e=>{
+    if(e.key==="Escape" && header.classList.contains("open")){
+      setMenu(false);
+      menuBtn.focus();
+    }
+  });
+  nav.addEventListener("click",e=>{ if(e.target.closest("a")) setMenu(false); });
 }
 
 /* ---- tours ---- */
@@ -108,8 +129,15 @@ if($("#home-picks")){
 /* ---- guide ---- */
 if($("#q")){
   const state = {q:"", cat:"all", area:"", price:"", sort:"cat", fav:false};
+  const filterPanel = $("#guide-filters");
+  if(filterPanel){
+    const compact = matchMedia("(max-width:600px)");
+    const syncFilterPanel = ()=>{ filterPanel.open = !compact.matches; };
+    syncFilterPanel();
+    compact.addEventListener?.("change",syncFilterPanel);
+  }
   const places = [...new Set(RECS.filter(r=>r.c!=="books").map(r=>r.a))].sort((a,b)=>a.localeCompare(b,"tr"));
-  $("#f-area").innerHTML = `<option value="">All neighbourhoods</option>` + places.map(a=>`<option>${esc(a)}</option>`).join("");
+  $("#f-area").innerHTML = `<option value="">All areas</option>` + places.map(a=>`<option>${esc(a)}</option>`).join("");
 
   function matches(r, ignoreCat){
     if(!ignoreCat && state.cat!=="all" && r.c!==state.cat) return false;
@@ -136,10 +164,20 @@ if($("#q")){
     ranges.forEach(([s,e])=>{ if(s<last) return; res+=esc(text.slice(last,s))+"<mark>"+esc(text.slice(s,e))+"</mark>"; last=e; });
     return res+esc(text.slice(last));
   }
+  function mapLinks(r){
+    if(r.c==="books") return "";
+    const maps = r.maps ?? [{label:"Open map", query:`${r.n}, ${r.a}`}];
+    const links = maps.map(({label,query})=>{
+      const url = `https://www.google.com/maps/search/?api=1&amp;query=${encodeURIComponent(query + ", İstanbul")}`;
+      const name = label==="Open map" ? `${label} for ${r.n}` : label;
+      return `<a href="${url}" target="_blank" rel="noopener" aria-label="${esc(name)} (opens in a new tab)">${esc(label)}</a>`;
+    });
+    return `<div class="map-links">${links.join("")}</div>`;
+  }
   function row(r, showCat){
     const price = r.p===null ? "" : r.p===0 ? "Free" : "₺".repeat(r.p);
     const where = r.c==="books" ? `by ${hl(r.a)}` : hl(r.a);
-    return `<li><div><span class="name">${hl(r.n)}</span><span class="area">${where}</span>${r.fav?'<span class="fav">★ Favourite</span>':""}${showCat?`<span class="tag">${catLabel[r.c]}</span>`:""}</div><span class="price">${price}</span><p class="tip">${hl(r.t)}</p></li>`;
+    return `<li><div><span class="name">${hl(r.n)}</span><span class="area">${where}</span>${r.fav?'<span class="fav">★ Favourite</span>':""}${showCat?`<span class="tag">${catLabel[r.c]}</span>`:""}</div><span class="price">${price}</span><p class="tip">${hl(r.t)}</p>${mapLinks(r)}</li>`;
   }
   function sorter(a,b){
     if(state.sort==="name") return a.n.localeCompare(b.n,"tr");
@@ -163,9 +201,9 @@ if($("#q")){
     const filtered = state.q||state.cat!=="all"||state.area||state.price!==""||state.fav||state.sort!=="cat";
     $("#count").textContent = `${list.length} ${list.length===1?"place":"places"}`+(state.cat!=="all"?` in ${catLabel[state.cat]}`:"");
     $("#clear").hidden = !filtered;
-    if(!list.length){ $("#results").innerHTML = `<div class="empty">Nothing matches yet. Try another word or <button type="button" class="linkish" data-clear>clear the filters</button>.</div>`; return; }
     const grouped = state.cat==="all" && state.sort==="cat";
-    $("#toggle-all").hidden = !grouped;
+    $("#toggle-all").hidden = !list.length || !grouped;
+    if(!list.length){ $("#results").innerHTML = `<div class="empty">Nothing matches yet. Try another word or <button type="button" class="linkish" data-clear>clear the filters</button>.</div>`; return; }
     if(grouped){
       const shown = CATS.filter(c=>list.some(r=>r.c===c.id));
       $("#results").innerHTML = `<div class="sections">`+shown.map(c=>{
@@ -232,22 +270,34 @@ if($("#book-form")){
   /* ---- booking form -> WhatsApp ---- */
   const bookingDate = $("#f-date");
   const groupSize = $("#f-size");
+  const fields = {name:$("#f-name"), date:bookingDate, size:groupSize};
   const todayInIstanbul = ()=>new Intl.DateTimeFormat("sv-SE",{timeZone:"Europe/Istanbul",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
   bookingDate.min = todayInIstanbul();
-  ["name","date","size"].forEach(k=>$("#f-"+k).addEventListener("input",()=>{$("#e-"+k).textContent="";}));
+  function showError(key, message){
+    $("#e-"+key).textContent = message;
+    if(message) fields[key].setAttribute("aria-invalid","true");
+    else fields[key].removeAttribute("aria-invalid");
+  }
+  for(const [key, field] of Object.entries(fields)){
+    field.addEventListener("input",()=>showError(key,""));
+  }
   $("#book-form").addEventListener("submit",e=>{
     e.preventDefault();
-    const name=$("#f-name").value.trim(), date=bookingDate.value;
+    const name=fields.name.value.trim(), date=bookingDate.value;
     const size=groupSize.valueAsNumber;
     bookingDate.min = todayInIstanbul();
-    let ok=true;
-    if(!name){$("#e-name").textContent="Enter your name.";ok=false;}
-    if(!date){$("#e-date").textContent="Pick a date.";ok=false;}
-    else if(bookingDate.validity.rangeUnderflow){$("#e-date").textContent="Pick today or a future date.";ok=false;}
-    if(!Number.isInteger(size) || groupSize.validity.rangeUnderflow || groupSize.validity.rangeOverflow){
-      $("#e-size").textContent="Enter a whole number from 1 to 30.";ok=false;
+    const badSize = !Number.isInteger(size) || groupSize.validity.rangeUnderflow || groupSize.validity.rangeOverflow;
+    const errors = {
+      name:name ? "" : "Enter your name.",
+      date:!date ? "Pick a date." : bookingDate.validity.rangeUnderflow ? "Pick today or a future date." : "",
+      size:badSize ? "Enter a whole number from 1 to 30." : ""
+    };
+    for(const [key, message] of Object.entries(errors)) showError(key,message);
+    const firstError = Object.keys(errors).find(key=>errors[key]);
+    if(firstError){
+      fields[firstError].focus();
+      return;
     }
-    if(!ok) return;
     const sel=$("#f-tour"), note=$("#f-note").value.trim();
     const text=`Hello Salih! I'd like to book a tour.\nName: ${name}\nDate: ${date}\nTour: ${sel.options[sel.selectedIndex].text}\nGroup size: ${size}${note?`\nNotes: ${note}`:""}`;
     const a=document.createElement("a");

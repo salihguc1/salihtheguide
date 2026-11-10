@@ -62,32 +62,37 @@
         <input id="q" type="search" placeholder="Search: baklava, sunset, jazz, Kadıköy…" aria-label="Search recommendations" autocomplete="off">
       </div>
 
-      <div class="chips" id="chips" role="group" aria-label="Category"></div>
+      <details class="guide-filters" id="guide-filters" open>
+        <summary>Filters</summary>
+        <div class="filter-controls">
+          <div class="chips" id="chips" role="group" aria-label="Category"></div>
 
-      <div class="filters">
-        <div class="field"><label for="f-area">Neighbourhood</label><select id="f-area"></select></div>
-        <div class="field"><label for="f-price">Budget</label>
-          <select id="f-price">
-            <option value="">Any budget</option>
-            <option value="0">Free</option>
-            <option value="1">₺ Budget</option>
-            <option value="2">₺₺ Mid-range</option>
-            <option value="3">₺₺₺ Special occasion</option>
-          </select></div>
-        <div class="field"><label for="f-sort">Sort by</label>
-          <select id="f-sort">
-            <option value="cat">Category</option>
-            <option value="name">Name A–Z</option>
-            <option value="area">Neighbourhood</option>
-            <option value="price">Price, low to high</option>
-          </select></div>
-        <label class="toggle"><input type="checkbox" id="f-fav"> My favourites only</label>
-      </div>
+          <div class="filters">
+            <div class="field"><label for="f-area">Neighbourhood</label><select id="f-area"></select></div>
+            <div class="field"><label for="f-price">Budget</label>
+              <select id="f-price">
+                <option value="">Any budget</option>
+                <option value="0">Free</option>
+                <option value="1">₺ Budget</option>
+                <option value="2">₺₺ Mid-range</option>
+                <option value="3">₺₺₺ Splurge</option>
+              </select></div>
+            <div class="field"><label for="f-sort">Sort by</label>
+              <select id="f-sort">
+                <option value="cat">Category</option>
+                <option value="name">Name A–Z</option>
+                <option value="area">Neighbourhood</option>
+                <option value="price">Lowest price</option>
+              </select></div>
+            <label class="toggle"><input type="checkbox" id="f-fav"> Favourites only</label>
+          </div>
+        </div>
+      </details>
 
       <div class="result-bar">
         <span id="count" aria-live="polite"></span>
         <span class="bar-actions">
-          <button type="button" class="linkish" id="toggle-all">Open all</button>
+          <button type="button" class="linkish" id="toggle-all" hidden>Open all</button>
           <button type="button" class="linkish" id="clear" hidden>Clear filters</button>
         </span>
       </div>

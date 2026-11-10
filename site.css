@@ -75,6 +75,7 @@ header.open .menu-btn .m-close{display:inline}
   .menu-btn{display:inline-flex}
   .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;margin:0;
     background:var(--surface);border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.12);
+    max-height:calc(100dvh - 80px - env(safe-area-inset-top,0px));overflow-y:auto;
     padding:6px max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px))}
   header.open .links{display:flex}
   .links a{font-size:17px;color:var(--ink);padding:14px 4px;border-bottom:1px solid var(--line)}
@@ -132,6 +133,24 @@ section{padding-block:clamp(56px,8vw,96px)}
 .filters select{padding:9px 10px;font-size:15px}
 .toggle{display:inline-flex;align-items:center;gap:8px;font-size:15px;padding-bottom:9px;cursor:pointer}
 .toggle input{width:18px;height:18px;accent-color:var(--sea)}
+.guide-filters{padding:0;border:0}
+.guide-filters > summary{display:none}
+@media (max-width:600px){
+  .guide-filters{margin-bottom:16px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+  .guide-filters > summary{display:list-item;padding:12px 14px;color:var(--ink)}
+  .guide-filters[open] > summary{border-bottom:1px solid var(--line)}
+  .filter-controls{padding:12px}
+  .chips,.filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .chips{margin-bottom:12px}
+  .chip{justify-content:space-between;min-height:44px;padding:8px 10px;text-align:left}
+  .chip:first-child{grid-column:1/-1}
+  .chip .n{flex:none}
+  .filters{margin:0}
+  .filters .field{min-width:0;max-width:none}
+  .filters select{min-height:44px;padding:8px 6px;font-size:16px}
+  .filters .toggle{min-height:44px;margin:0;padding:0 4px}
+  .filters .toggle input{flex:none;margin:0}
+}
 .result-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--muted);padding-bottom:10px}
 .linkish{font:600 14px var(--body);background:none;border:0;color:var(--sea);cursor:pointer;padding:0}
 .group-title{font-family:var(--display);font-size:18px;font-weight:600;margin:26px 0 4px;display:flex;gap:8px;align-items:baseline}
@@ -142,6 +161,8 @@ section{padding-block:clamp(56px,8vw,96px)}
 .list .area{font-size:13px;color:var(--sea);font-weight:600;margin-left:8px}
 .list .tag{font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:8px;white-space:nowrap}
 .list .tip{grid-column:1/-1;color:var(--muted);font-size:15.5px;max-width:60em}
+.map-links{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px 14px}
+.map-links a{display:inline-flex;align-items:center;min-height:32px;color:var(--sea);font-size:14px;font-weight:600;text-underline-offset:3px}
 .list .price{font-size:14px;color:var(--gold-ink);font-weight:600;letter-spacing:.05em}
 .list .fav{font-size:12px;font-weight:600;color:var(--gold-ink);background:var(--gold-soft);border-radius:999px;padding:1px 8px;margin-left:8px;white-space:nowrap}
 .list mark{background:var(--gold-soft);color:inherit;border-radius:3px}
@@ -166,6 +187,7 @@ label{font-size:14px;font-weight:600}
 input,select,textarea{font:16px var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 12px;width:100%}
 textarea{min-height:90px;resize:vertical}
 .err{font-size:13px;color:var(--danger)}
+#book-form [aria-invalid="true"]{border-color:var(--danger)}
 form .btn{grid-column:1/-1;justify-content:center}
 .contact-list{display:flex;flex-direction:column;gap:18px;margin-top:24px}
 .contact-list .k{font-size:13px;color:var(--muted)}

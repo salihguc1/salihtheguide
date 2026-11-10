@@ -61,10 +61,10 @@
         </div>
       </div>
       <form id="book-form" novalidate>
-        <div class="field"><label for="f-name">Your name</label><input id="f-name" autocomplete="name" placeholder="Anna Rossi"><span class="err" id="e-name"></span></div>
-        <div class="field"><label for="f-date">Preferred date</label><input id="f-date" type="date"><span class="err" id="e-date"></span></div>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" autocomplete="name" placeholder="Anna Rossi" required aria-describedby="e-name"><span class="err" id="e-name" aria-live="polite"></span></div>
+        <div class="field"><label for="f-date">Preferred date</label><input id="f-date" type="date" required aria-describedby="e-date"><span class="err" id="e-date" aria-live="polite"></span></div>
         <div class="field"><label for="f-tour">Tour</label><select id="f-tour"></select></div>
-        <div class="field"><label for="f-size">Group size</label><input id="f-size" type="number" min="1" max="30" value="2" aria-describedby="e-size"><span class="err" id="e-size" aria-live="polite"></span></div>
+        <div class="field"><label for="f-size">Group size</label><input id="f-size" type="number" min="1" max="30" value="2" required aria-describedby="e-size"><span class="err" id="e-size" aria-live="polite"></span></div>
         <div class="field full"><label for="f-note">Anything I should know?</label><textarea id="f-note" placeholder="We love food and old streets. One of us walks slowly."></textarea></div>
         <button class="btn btn-sea" type="submit">Send request on WhatsApp</button>
       </form>
