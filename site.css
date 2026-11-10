@@ -133,13 +133,8 @@ section{padding-block:clamp(56px,8vw,96px)}
 .filters select{padding:9px 10px;font-size:15px}
 .toggle{display:inline-flex;align-items:center;gap:8px;font-size:15px;padding-bottom:9px;cursor:pointer}
 .toggle input{width:18px;height:18px;accent-color:var(--sea)}
-.guide-filters{padding:0;border:0}
-.guide-filters > summary{display:none}
 @media (max-width:600px){
-  .guide-filters{margin-bottom:16px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
-  .guide-filters > summary{display:list-item;padding:12px 14px;color:var(--ink)}
-  .guide-filters[open] > summary{border-bottom:1px solid var(--line)}
-  .filter-controls{padding:12px}
+  .filter-controls{margin-bottom:16px;padding:12px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
   .chips,.filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
   .chips{margin-bottom:12px}
   .chip{justify-content:space-between;min-height:44px;padding:8px 10px;text-align:left}
