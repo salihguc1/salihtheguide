@@ -1,7 +1,7 @@
 ---
 layout: null
-title: Blog
-description: Stories and practical tips about Istanbul from local guide Salih Güç.
+title: Istanbul Travel Blog
+description: Plan your first Istanbul trip with local advice on public transport, walking routes, food, mosques and day trips.
 nav: blog
 permalink: /blog/
 ---
@@ -22,6 +22,9 @@ permalink: /blog/
 <meta name="twitter:image" content="https://salihtheguide.com{{ page.image | default: '/og-image.png' }}">
 <meta property="og:type" content="website">
 {% include head-common.html %}
+{% if site.blog_click_counter and site.blog_click_counter != "" %}
+<script src="/blog-popularity.js" defer></script>
+{% endif %}
 </head>
 <body>
 {% include header.html %}
@@ -32,13 +35,13 @@ permalink: /blog/
       <div class="sec-head">
         <div class="eyebrow">Blog</div>
         <h1 class="section-title">Stories and tips from Istanbul</h1>
-        <p>What I've learned walking this city every day: history, food, practical advice and the places most visitors miss.</p>
+        <p>Planning your first Istanbul trip? I’ve put my practical travel guides here, from getting around by ferry to choosing a walking route and knowing what to order.</p>
       </div>
       {% if site.posts.size > 0 %}
-      <div class="post-list">
+      <div class="post-list" data-click-counter="{{ site.blog_click_counter | escape }}">
         {% for post in site.posts %}
         {% assign words = post.content | number_of_words %}{% assign minutes = words | divided_by: 200 | plus: 1 %}
-        <a class="post-card" href="{{ post.url }}">
+        <a class="post-card" href="{{ post.url }}" data-post-slug="{{ post.slug | escape }}">
           {% if post.image %}<img src="{{ post.image }}" alt="" loading="lazy">{% endif %}
           <div class="post-card-body">
             <span class="eyebrow">{{ post.category | default: "Istanbul" }}</span>

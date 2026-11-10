@@ -1,6 +1,6 @@
 ---
 title: "Istanbul in 3 days: a local guide's plan for your first visit"
-description: "A realistic three-day plan for Istanbul: the Old City, the bazaars, Beyoğlu and a ferry to Kadıköy, with food stops and the closing days to check."
+description: "A three-day Istanbul itinerary for first-time visitors, with the Old City, the bazaars, Beyoğlu and a ferry to Kadıköy."
 category: "Itineraries"
 ---
 
@@ -10,7 +10,7 @@ Before you fix the order of the days, check three things against your dates:
 
 - **Topkapı Palace** is closed on Tuesdays.
 - **The Grand Bazaar** is closed on Sundays and on the main religious holidays.
-- **The Blue Mosque and Hagia Sophia** close to sightseeing visitors around the Friday midday prayer.
+- **The Blue Mosque and Hagia Sophia** have separate visitor arrangements. Check Friday access for each before setting your route.
 
 Swap the days around to fit, and the plan works any day of the week.
 
@@ -73,6 +73,8 @@ In Kadıköy, head into the market streets for lunch. Try *lahmacun*, a thin, cr
 If you still want to walk, continue to Moda and its seafront, and go down to the water while there's still daylight. If you'd rather take it easy, stay around Kadıköy market for dinner, close to the pier.
 
 Before you sit down for dinner, check the times of the evening ferries back. Boats from Kadıköy go to both Karaköy and Eminönü, and the last departures vary, so pick the one that suits where you're staying.
+
+If you’d like a longer stop on the Asian side, use my [one-day Kadıköy and Moda itinerary](/blog/kadikoy-and-moda-in-one-day/).
 
 ## My tip
 

@@ -1,6 +1,6 @@
 ---
 title: "Turkish breakfast in Istanbul: what to order and where"
-description: "What comes with a Turkish breakfast, how to order menemen and tea, and the neighbourhoods I'd go to for breakfast in Istanbul."
+description: "Find out what to order for Turkish breakfast in Istanbul, from menemen and simit to a full serpme kahvaltı."
 category: "Food"
 ---
 
@@ -72,6 +72,8 @@ On the Asian side, have a quick breakfast near Kadıköy market, close to the fe
 ### Karaköy for an early start near Galata
 
 If you're staying near Karaköy, have börek and tea before walking up to Galata. The climb is steep in places, so keep breakfast light if you have a long morning ahead. My [Taksim & Beyoğlu walk](/tours.html) goes the other way, down from İstiklal Avenue through Galata to Karaköy, which makes Karaköy a good place to stop for tea at the end.
+
+If you’d like a short breakfast followed by a walk by the water, my [Kadıköy and Moda day plan](/blog/kadikoy-and-moda-in-one-day/) starts near the ferry and the market.
 
 ## My tip
 

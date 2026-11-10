@@ -1,6 +1,6 @@
 ---
 title: "The Bosphorus by public ferry: three routes I recommend"
-description: "See Istanbul from the water for the price of a bus fare. Which city ferry to take, where to sit, how to pay, and when the Long Bosphorus Tour is worth it."
+description: "Compare Bosphorus public ferry routes from Eminönü, see how to pay, and decide when to choose the Long Bosphorus Tour."
 category: "Getting around"
 ---
 
@@ -55,6 +55,8 @@ The last ferry of the evening depends on the pier, the route and the day of the 
 - Give yourself extra time at Eminönü to find the right pier and top up your card.
 - Fog and strong wind can delay or cancel sailings. Check Şehir Hatları's service announcements on the day.
 - Bring an extra layer if you plan to sit outside. It's often windier and colder on the water than in the streets. If it's too much, move inside to a window seat.
+
+For a longer day on the water, see my [Princes’ Islands ferry and day-trip guide](/blog/princes-islands-day-trip/).
 
 ## My tip
 

@@ -1,6 +1,6 @@
 ---
 title: "How to use the İstanbulkart on your first trip"
-description: "How to buy and top up an İstanbulkart, where to tap it, and when two travellers can share one card in Istanbul."
+description: "Learn how to use an Istanbulkart on the metro, trams and ferries, including where to buy and top up the card."
 category: "Getting around"
 ---
 
@@ -73,6 +73,8 @@ It's easy to reach the pier and realise the person with the card is still shoppi
 For an easy first outing, take the T1 tram to Eminönü and walk to the city ferry piers. My post on [the Bosphorus by public ferry](/blog/bosphorus-by-public-ferry/) explains which boat to take from there. For places to eat and visit on both shores, see [What to Do in İstanbul](/istanbul-guide.html).
 
 If you're joining my [Old City walk](/tours.html), the tram is the easiest way to reach Sultanahmet. Save the ferry for the afternoon.
+
+If you’re just arriving, my [Istanbul airport transport guide](/blog/istanbul-airport-to-city-centre/) explains which parts of the trip use city transport and where to check shuttle payment separately.
 
 ## My tip
 
